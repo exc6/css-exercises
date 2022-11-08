@@ -22,7 +22,16 @@ dd {
   margin: 0;
   padding: 0;
 }
-
+body,html{
+  font-family: Georgia, Helvetica, '微软雅黑';
+  font-size: 16px;
+}
+h1{
+  font-size: 2rem;
+}
+h2{
+  font-size: 1.6rem;
+}
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'],ul{
@@ -482,6 +491,7 @@ background-color: blanchedalmond;
   font-size: 35px;
   color: var(--white);
   background-color: var(--gray-800);
+  /* 圆 */
  width: 70px;
  height: 70px;
  line-height: 70px;
@@ -490,4 +500,45 @@ background-color: blanchedalmond;
 }
 .icon-html5{
  padding: 3px 5px;
+}
+ /******************联系方式*******************/ 
+ /* #contact{
+  margin: 0 auto;
+ } */
+ /* 用弹性盒模型把文字两端对齐 */
+ #contact .flex{
+  margin-top: 20px;
+  justify-content: space-between;
+ }
+ /* 字体设置 */
+ #contact .flex li{
+  text-align: center;
+  font-size: 18px;
+  font-weight: bold;
+  }
+  /* 图标 */
+ #contact .flex li .iconfont{
+  font-size: 40px;
+ }
+
+/******************页尾*******************/ 
+.green{
+  height: 200px;
+  width: 100%;
+  line-height: 200px;
+  margin-bottom: 100px;
+}
+/******************图标*******************/
+/* .back-to-top{
+  position: relative;
+} */
+.back-to-top .iconfont{
+  position: fixed;
+  right: 100px;
+  bottom: 100px;
+  font-size: 80px;
+  color: var(--gray-800);
+}
+.back-to-top a{
+  transform: .3s;
 }
