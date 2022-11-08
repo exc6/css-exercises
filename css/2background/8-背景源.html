@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景源</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dotted black;
+            background-image: url(./images/dog.jpg);
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+        .box1{
+            background-origin: padding-box; /*默认，指定背景图片由padding开始展示*/
+        }
+        .box2{
+            background-origin: content-box; /*指定背景图片在内容区域开始展示*/
+        }
+        .box3{
+            background-origin: border-box;/*指定背景图片在边框区域开始展示*/
+        }
+    </style>
+</head>
+
+<body>
+    <div class="box box1"></div>
+    <div class="box box2"></div>
+    <div class="box box3"></div>
+</body>
+
+</html>

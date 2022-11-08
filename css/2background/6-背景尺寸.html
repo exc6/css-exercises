@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景尺寸</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dotted black;
+            background-image: url('./images/dog.jpg');
+            background-repeat: no-repeat;
+        }
+        .box1{
+            background-size: auto;/*根据图片的原始宽高及计算背景图尺寸*/
+        }
+        .box2{
+            width: 600px;
+            background-size: cover; /*cover：动词，覆盖。 图片必须覆盖整个元素，图片的局部可能无法显示*/
+        }
+        .box3{
+            background-size: contain;/* contain:动词，元素必须包含整个图片，元素的局部可能会出现空白*/
+        }
+        .box4{
+            background-size: 240px 240px;
+        }
+        .box5{
+            background-size: 240px auto;
+        }
+        .box6{
+            background-size: 50% 200px; 
+        }
+    </style>
+</head>
+
+<body>
+    background-size: auto;/*根据图片的原始宽高及计算背景图尺寸*/
+    <div class="box box1"></div>
+    background-size: cover; /*cover：动词，覆盖。 图片必须覆盖整个元素，图片的局部可能无法显示*/
+    <div class="box box2"></div>
+    background-size: contain;/* contain:动词，元素必须包含整个图片，元素的局部可能会出现空白*/
+    <div class="box box3"></div>
+    background-size: 240px 240px;
+    <div class="box box4"></div>
+    background-size: 240px auto; /*240px 被解析为宽度，auto按照原比例自动调节*/
+    <div class="box box5"></div>
+
+    <div class="box box6"></div>
+</body>
+
+</html>

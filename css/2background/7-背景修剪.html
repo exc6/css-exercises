@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>背景修剪</title>
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            padding: 20px;
+            border: 20px dotted black;
+            background-image: url(./images/dog.jpg);
+            background-repeat: no-repeat;
+        }
+        .box1{
+            background-clip: border-box; /*默认属性值*/
+        }
+        .box2{
+            background-clip: padding-box; /*将内边距以外的背景部分裁掉*/
+        }
+        .box3{
+            background-clip: content-box; /*将内容以外的背景部分裁掉*/
+        }
+        .box4{
+            font-size: 4rem;
+            font-weight: bold;
+            display: block;
+            align-items: center;
+            justify-content: center;
+            color: transparent; /*透明*/
+            background-clip: text; /*让背景显示在文本中*/
+            background-size: contain;
+        }
+    </style>
+</head>
+
+<body>
+    background-clip: border-box; /*默认属性值*/
+    <div class="box box1"></div>
+    background-clip: padding-box; /*将内边距以外的背景部分裁掉*/
+    <div class="box box2"></div>
+    background-clip: content-box; /*将内容以外的背景部分裁掉*/
+    <div class="box box3"></div>
+    background-clip: text; /*让背景显示在文本中*/
+    <div class="box box4">锄禾</div>
+</body>
+
+</html>
